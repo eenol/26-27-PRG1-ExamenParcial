@@ -10,7 +10,11 @@ public class Examen {
         System.out.print("Introduce la edad del alumno: ");
         int edad = teclado.nextInt();
 
-        System.out.println("La edad del alumno es: " + edad);
+        if (edad >= 18) {
+            System.out.println("El alumno es mayor de edad");
+        } else {
+            System.out.println("El alumno es menor de edad");
+        }
 
         teclado.close();
     }
