@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import java.util.Scanner;
-
 public class Examen {
     public static void main(String[] args) {
 
@@ -39,12 +37,21 @@ public class Examen {
 
         } while (numAsignaturas < 1 || numAsignaturas > 10);
 
+        // Pedir las notas
         int nota;
+        double sumaNotas = 0;
 
         for (int i = 1; i <= numAsignaturas; i++) {
             System.out.print("Nota de la asignatura N" + i + ": ");
             nota = teclado.nextInt();
+
+            sumaNotas = sumaNotas + nota;
         }
+
+        // Calcular la media
+        double media = sumaNotas / numAsignaturas;
+
+        System.out.println("La media de las notas es: " + media);
 
         teclado.close();
     }
