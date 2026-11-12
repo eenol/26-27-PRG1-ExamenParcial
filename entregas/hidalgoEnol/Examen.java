@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import java.util.Scanner;
+
 public class Examen {
     public static void main(String[] args) {
 
@@ -25,7 +27,6 @@ public class Examen {
             System.out.println("El alumno es menor de edad");
         }
 
-        // Pedir número de asignaturas
         int numAsignaturas;
 
         do {
@@ -38,7 +39,12 @@ public class Examen {
 
         } while (numAsignaturas < 1 || numAsignaturas > 10);
 
-        System.out.println("El alumno se matricula en " + numAsignaturas + " asignaturas.");
+        int nota;
+
+        for (int i = 1; i <= numAsignaturas; i++) {
+            System.out.print("Nota de la asignatura N" + i + ": ");
+            nota = teclado.nextInt();
+        }
 
         teclado.close();
     }
