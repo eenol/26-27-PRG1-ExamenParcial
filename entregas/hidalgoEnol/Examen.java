@@ -26,8 +26,17 @@ public class Examen {
         }
 
         // Pedir número de asignaturas
-        System.out.print("Introduce el número de asignaturas: ");
-        int numAsignaturas = teclado.nextInt();
+        int numAsignaturas;
+
+        do {
+            System.out.print("Introduce el número de asignaturas (1-10): ");
+            numAsignaturas = teclado.nextInt();
+
+            if (numAsignaturas < 1 || numAsignaturas > 10) {
+                System.out.println("Número incorrecto. Vuelve a intentarlo.");
+            }
+
+        } while (numAsignaturas < 1 || numAsignaturas > 10);
 
         System.out.println("El alumno se matricula en " + numAsignaturas + " asignaturas.");
 
