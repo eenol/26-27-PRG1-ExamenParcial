@@ -37,8 +37,8 @@ public class Examen {
 
         } while (numAsignaturas < 1 || numAsignaturas > 10);
 
-        
         int nota;
+        int aprobadas = 0;
         double sumaNotas = 0;
 
         for (int i = 1; i <= numAsignaturas; i++) {
@@ -46,12 +46,16 @@ public class Examen {
             nota = teclado.nextInt();
 
             sumaNotas = sumaNotas + nota;
+
+            if (nota >= 5) {
+                aprobadas++;
+            }
         }
 
-        
         double media = sumaNotas / numAsignaturas;
 
         System.out.println("La media de las notas es: " + media);
+        System.out.println("Asignaturas aprobadas: " + aprobadas);
 
         teclado.close();
     }
