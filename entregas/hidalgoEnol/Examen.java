@@ -37,7 +37,7 @@ public class Examen {
 
         } while (numAsignaturas < 1 || numAsignaturas > 10);
 
-        // Pedir las notas
+        
         int nota;
         double sumaNotas = 0;
 
@@ -48,7 +48,7 @@ public class Examen {
             sumaNotas = sumaNotas + nota;
         }
 
-        // Calcular la media
+        
         double media = sumaNotas / numAsignaturas;
 
         System.out.println("La media de las notas es: " + media);
